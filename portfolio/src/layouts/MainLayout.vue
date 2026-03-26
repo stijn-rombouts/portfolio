@@ -18,7 +18,7 @@
             dense
             :icon="$q.dark.isActive ? 'light_mode' : 'dark_mode'"
             class="q-ml-md"
-            @click="$q.dark.toggle"
+            @click="toggleDarkMode"
             aria-label="Toggle dark mode"
           >
             <q-tooltip>{{ $q.dark.isActive ? 'Switch to Light Mode' : 'Switch to Dark Mode' }}</q-tooltip>
@@ -32,7 +32,7 @@
             dense
             :icon="$q.dark.isActive ? 'light_mode' : 'dark_mode'"
             class="q-mr-sm"
-            @click="$q.dark.toggle"
+            @click="toggleDarkMode"
           />
           <q-btn
             flat
@@ -109,6 +109,17 @@ const $q = useQuasar();
 const $route = useRoute();
 
 const leftDrawerOpen = ref(false);
+
+// Dark mode persistence
+const savedDark = localStorage.getItem('darkMode');
+if (savedDark !== null) {
+  $q.dark.set(savedDark === 'true');
+}
+
+function toggleDarkMode() {
+  $q.dark.toggle();
+  localStorage.setItem('darkMode', $q.dark.isActive.toString());
+}
 
 function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;
