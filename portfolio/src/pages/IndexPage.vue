@@ -1,27 +1,18 @@
 <template>
-  <q-page class="flex flex-center hero-page"
-    :class="$q.dark.isActive ? 'bg-slate-900 text-white' : 'bg-slate-50 text-slate-800'">
-    <div class="row full-width container items-center" :class="$q.screen.gt.xs ? 'q-px-xl' : 'q-px-md'">
-      <div class="col-12 col-md-6 q-pa-lg animate-fade-in-left">
+  <q-page class="flex flex-center hero-page">
+    <div class="row full-width container justify-center items-center" :class="$q.screen.gt.xs ? 'q-px-xl' : 'q-px-md'">
+      <div class="col-12 col-md-8 q-pa-lg animate-fade-in text-center">
         <h1 class="text-weight-bold q-mb-md gradient-text responsive-title">
-          Welcome to My Professional Portfolio
+          Welcome to My Portfolio
         </h1>
-        <p class="text-h5 q-mb-xl line-height-1-6" :class="$q.dark.isActive ? 'text-grey-4' : 'text-slate-700'">
-          Hello, I'm <span class="text-primary text-weight-medium">Stijn Rombouts</span>. <br />
+        <p class="text-h5 q-mb-xl line-height-1-6 text-white">
+          Hello, I'm <span class="text-primary text-weight-medium text-glow">Stijn Rombouts</span>. <br />
           Highly motivated Applied Computer Science student with a passion for building innovative and efficient digital
           solutions.
         </p>
-        <div class="q-gutter-sm">
+        <div class="q-gutter-sm flex flex-center">
           <q-btn unelevated color="primary" label="About Me" size="lg" to="/about" class="q-px-xl" />
-          <q-btn outline :color="$q.dark.isActive ? 'white' : 'primary'" label="View CV" size="lg" to="/cv"
-            class="q-px-xl" />
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 flex flex-center q-pa-lg animate-fade-in-right">
-        <div class="hero-image-container">
-          <div class="hero-image-glow"></div>
-          <q-img src="/home_pic.png" class="hero-image shadow-24" alt="Hero Image: Cloud Infrastructure" />
+          <q-btn outline color="white" label="View CV" size="lg" to="/cv" class="q-px-xl" />
         </div>
       </div>
     </div>
@@ -38,16 +29,36 @@
 
 <style lang="scss">
 .hero-page {
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
+  background-image: url('/home.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
 }
 
-.bg-slate-900 {
-  background: radial-gradient(circle at top right, #1e293b, #0f172a);
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(var(--q-primary), 0.5);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--text-main) 0%, #94a3b8 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #818cf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -59,11 +70,9 @@
 
 @media (max-width: 600px) {
   .hero-page {
-    padding-top: 80px;
-    padding-bottom: 60px;
-    height: auto !important;
-    min-height: 100vh;
-    justify-content: flex-start !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: center !important;
   }
 
   .responsive-title {
@@ -75,33 +84,12 @@
   line-height: 1.6;
 }
 
-.hero-image-container {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-}
-
-.hero-image {
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.hero-image-glow {
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
-  z-index: -1;
-  filter: blur(20px);
-}
 
 .decorator {
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  z-index: 0;
+  z-index: 1;
 }
 
 .circle-1 {
@@ -120,35 +108,19 @@
   left: -100px;
 }
 
-.animate-fade-in-left {
-  animation: fadeInLeft 1s ease-out;
+.animate-fade-in {
+  animation: fadeIn 1.2s ease-out;
 }
 
-.animate-fade-in-right {
-  animation: fadeInRight 1s ease-out;
-}
-
-@keyframes fadeInLeft {
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateY(20px);
   }
 
   to {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 </style>

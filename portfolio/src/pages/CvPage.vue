@@ -8,13 +8,7 @@
       </div>
 
       <div class="pdf-wrapper">
-        <iframe src="/CV_stijnrombouts.pdf#toolbar=0" class="pdf-iframe" title="Stijn Rombouts CV">
-          <div class="flex flex-center q-pa-xl text-center">
-            <q-icon name="picture_as_pdf" size="100px" color="grey-4" />
-            <p class="text-h6 q-mt-md">It seems your browser doesn't support PDF embedding.</p>
-            <q-btn flat color="primary" label="Download PDF instead" href="/CV_stijnrombouts.pdf" />
-          </div>
-        </iframe>
+        <iframe src="/CV_stijnrombouts.pdf#toolbar=0" class="pdf-iframe" title="Stijn Rombouts CV"></iframe>
       </div>
     </div>
   </q-page>
