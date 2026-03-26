@@ -1,42 +1,27 @@
 <template>
-  <q-page class="flex flex-center hero-page overflow-hidden" :class="$q.dark.isActive ? 'bg-slate-900 text-white' : 'bg-slate-50 text-slate-800'">
-    <div class="row full-width q-px-xl container items-center">
+  <q-page class="flex flex-center hero-page"
+    :class="$q.dark.isActive ? 'bg-slate-900 text-white' : 'bg-slate-50 text-slate-800'">
+    <div class="row full-width container items-center" :class="$q.screen.gt.xs ? 'q-px-xl' : 'q-px-md'">
       <div class="col-12 col-md-6 q-pa-lg animate-fade-in-left">
-        <h1 class="text-h2 text-weight-bold q-mb-md gradient-text">
+        <h1 class="text-weight-bold q-mb-md gradient-text responsive-title">
           Welcome to My Professional Portfolio
         </h1>
         <p class="text-h5 q-mb-xl line-height-1-6" :class="$q.dark.isActive ? 'text-grey-4' : 'text-slate-700'">
           Hello, I'm <span class="text-primary text-weight-medium">Stijn Rombouts</span>. <br />
-          Highly motivated Applied Computer Science student with a passion for building innovative and efficient digital solutions.
+          Highly motivated Applied Computer Science student with a passion for building innovative and efficient digital
+          solutions.
         </p>
         <div class="q-gutter-sm">
-          <q-btn
-            unelevated
-            color="primary"
-            label="About Me"
-            size="lg"
-            to="/about"
-            class="q-px-xl"
-          />
-          <q-btn
-            outline
-            :color="$q.dark.isActive ? 'white' : 'primary'"
-            label="View CV"
-            size="lg"
-            to="/cv"
-            class="q-px-xl"
-          />
+          <q-btn unelevated color="primary" label="About Me" size="lg" to="/about" class="q-px-xl" />
+          <q-btn outline :color="$q.dark.isActive ? 'white' : 'primary'" label="View CV" size="lg" to="/cv"
+            class="q-px-xl" />
         </div>
       </div>
 
       <div class="col-12 col-md-6 flex flex-center q-pa-lg animate-fade-in-right">
         <div class="hero-image-container">
           <div class="hero-image-glow"></div>
-          <q-img
-            src="https://cdn.quasar.dev/img/parallax2.jpg"
-            class="hero-image shadow-24"
-            alt="Hero Image"
-          />
+          <q-img src="/home_pic.png" class="hero-image shadow-24" alt="Hero Image: Cloud Infrastructure" />
         </div>
       </div>
     </div>
@@ -52,6 +37,11 @@
 </script>
 
 <style lang="scss">
+.hero-page {
+  overflow-x: hidden;
+  position: relative;
+}
+
 .bg-slate-900 {
   background: radial-gradient(circle at top right, #1e293b, #0f172a);
 }
@@ -60,6 +50,25 @@
   background: linear-gradient(135deg, var(--text-main) 0%, #94a3b8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.responsive-title {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  line-height: 1.1;
+}
+
+@media (max-width: 600px) {
+  .hero-page {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    height: auto !important;
+    min-height: 100vh;
+    justify-content: flex-start !important;
+  }
+
+  .responsive-title {
+    font-size: 2.2rem;
+  }
 }
 
 .line-height-1-6 {
@@ -124,6 +133,7 @@
     opacity: 0;
     transform: translateX(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -135,6 +145,7 @@
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);

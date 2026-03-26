@@ -47,3 +47,11 @@ body {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--card-border);
 }
+
+.glass-footer {
+  background: var(--header-bg) !important;
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--card-border);
+  color: #94a3b8; /* Slate 400 */
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
+}

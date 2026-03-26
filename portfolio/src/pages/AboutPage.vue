@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-pa-xl about-page-bg">
+  <q-page :class="[$q.screen.gt.xs ? 'q-pa-xl' : 'q-pa-md', 'about-page-bg']">
     <div class="container">
       <!-- Profile Header -->
       <div class="row q-col-gutter-xl items-center q-mb-xl">
@@ -9,13 +9,24 @@
           </q-avatar>
         </div>
         <div class="col-12 col-md-8">
-          <h2 class="text-h3 text-weight-bold q-mb-sm text-slate-800">About Me</h2>
+          <h2 :class="$q.screen.gt.xs ? 'text-h3' : 'text-h4'" class="text-weight-bold q-mb-sm text-slate-800">About Me</h2>
           <p class="text-h6 text-slate-700 line-height-1-6">
-            I'm a student of Applied Computer Science / Electronics-ICT, driven by a deep curiosity for how technology shapes our world. I enjoy solving complex problems and building tools that make a difference.
+            I’m a Digital Innovation student with a deep passion for the complex infrastructures and automated cloud ecosystems that power our world. I thrive on solving technical challenges and building robust systems that bridge the gap between hardware and software.
           </p>
-          <div class="q-mt-lg">
-            <q-chip outline color="primary" icon="school" label="Applied Computer Science" />
+          <div class="q-mt-lg flex items-center q-gutter-sm">
+            <q-chip outline color="primary" icon="school" label="Digital Innovation" />
             <q-chip outline color="secondary" icon="place" label="Belgium" />
+            <q-chip
+              clickable
+              outline
+              color="dark"
+              icon="mdi-github"
+              icon-right="open_in_new"
+              label="GitHub"
+              tag="a"
+              href="https://github.com/stijn-rombouts"
+              target="_blank"
+            />
           </div>
         </div>
       </div>
@@ -24,16 +35,16 @@
         <!-- Left Column: Career & Ambitions -->
         <div class="col-12 col-md-7">
           <section class="q-mb-xl">
-            <h3 class="text-h4 text-weight-bold q-mb-md text-slate-700">Why Applied Computer Science?</h3>
+            <h3 :class="$q.screen.gt.xs ? 'text-h4' : 'text-h5'" class="text-weight-bold q-mb-md text-slate-700">My Educational Path</h3>
             <p class="text-body1 text-slate-700 line-height-1-8">
-              I chose Applied Computer Science / Electronics-ICT because I've always been fascinated by the intersection of hardware and software. The ability to create something from nothing but code, and to understand the underlying electronics that make it all possible, is incredibly empowering. I want to be at the forefront of technological innovation, building robust systems that solve real-world challenges.
+              I began my journey in Applied Computer Science with a focus on building practical, high-impact solutions. I chose the Digital Innovation track because of its intensive, project-based learning, where we solve real-world problems for actual clients instead of just following traditional coursework. This hands-on experience deepened my fascination with the infrastructure powering our digital world, leading me to specialize in Cloud & Cyber Security (CCS). I’m driven by the complexities of cloud ecosystems and the technical challenges of managing secure, automated server architectures.
             </p>
           </section>
 
           <section class="q-mb-xl">
             <h3 class="text-h4 text-weight-bold q-mb-md text-slate-700">Future Dreams & Ambitions</h3>
             <p class="text-body1 text-slate-700 line-height-1-8">
-              My dream is to become a Lead Systems Architect, designing scalable and secure infrastructures for global-scale applications. I'm particularly interested in Cloud Computing and AI integration. I aspire to contribute to open-source projects and eventually lead a team of talented developers to create impactful software that improves people's lives.
+              I aim to carve out a path in the world of high-scale infrastructure and advanced automation. My passion lies in mastering the complexities of modern datacenters and cloud ecosystems, with a focus on building resilient, automated workflows. I aspire to design and manage the robust foundations that power our digital world, effectively bridging the gap between physical hardware and cloud-native orchestration.
             </p>
           </section>
 
@@ -64,7 +75,8 @@
                 no-caps
                 color="primary"
                 label="Check out our open-source projects"
-                icon="open_in_new"
+                icon="mdi-github"
+                icon-right="open_in_new"
                 type="a"
                 href="https://github.com/Thomas-More-Digital-Innovation"
                 target="_blank"
@@ -76,6 +88,7 @@
                 color="secondary"
                 label="Learn more about Digital Innovation"
                 icon="school"
+                icon-right="open_in_new"
                 type="a"
                 href="https://thomasmore.be/nl/opleidingen/professionele-bachelor/toegepaste-informatica/digital-innovation/geel/basistraject"
                 target="_blank"
@@ -85,21 +98,21 @@
           </section>
 
           <section>
-            <h3 class="text-h4 text-weight-bold q-mb-md text-slate-700">Unique Hobbies</h3>
+            <h3 class="text-h4 text-weight-bold q-mb-md text-slate-700">Hobbies</h3>
             <div class="row q-col-gutter-md">
               <div class="col-12 col-sm-6">
                 <q-card flat bordered class="hobby-card">
                   <q-card-section>
-                    <div class="text-h6"><q-icon name="explore" color="primary" class="q-mr-sm" /> Urban Exploration</div>
-                    <div class="text-caption text-slate-700">Discovering hidden architectural gems and documenting history through photography.</div>
+                    <div class="text-h6"><q-icon name="dns" color="primary" class="q-mr-sm" /> Homelab</div>
+                    <div class="text-caption text-slate-700">Architecting personal lab environments with Proxmox and TrueNAS, focusing on virtualization, Linux systems, and smart home automation.</div>
                   </q-card-section>
                 </q-card>
               </div>
               <div class="col-12 col-sm-6">
                 <q-card flat bordered class="hobby-card">
                   <q-card-section>
-                    <div class="text-h6"><q-icon name="psychology" color="primary" class="q-mr-sm" /> Chess Strategy</div>
-                    <div class="text-caption text-slate-700">Analyzing grandmaster games to sharpen logical thinking and pattern recognition.</div>
+                    <div class="text-h6"><q-icon name="music_note" color="primary" class="q-mr-sm" /> Drumming</div>
+                    <div class="text-caption text-slate-700">Expressing rhythm and creativity behind the drum kit, focusing on technique, timing, and musical exploration.</div>
                   </q-card-section>
                 </q-card>
               </div>
@@ -116,12 +129,13 @@
               <div class="q-mb-md">
                 <div class="text-subtitle1 text-weight-medium q-mb-sm">Technical Skills</div>
                 <div class="q-gutter-xs">
-                  <q-chip :color="$q.dark.isActive ? 'indigo-9' : 'indigo-1'" :text-color="$q.dark.isActive ? 'indigo-1' : 'indigo-9'" label="TypeScript" />
-                  <q-chip :color="$q.dark.isActive ? 'indigo-9' : 'indigo-1'" :text-color="$q.dark.isActive ? 'indigo-1' : 'indigo-9'" label="Vue.js / Quasar" />
-                  <q-chip :color="$q.dark.isActive ? 'indigo-9' : 'indigo-1'" :text-color="$q.dark.isActive ? 'indigo-1' : 'indigo-9'" label="Node.js" />
-                  <q-chip :color="$q.dark.isActive ? 'indigo-9' : 'indigo-1'" :text-color="$q.dark.isActive ? 'indigo-1' : 'indigo-9'" label="Python" />
-                  <q-chip :color="$q.dark.isActive ? 'indigo-9' : 'indigo-1'" :text-color="$q.dark.isActive ? 'indigo-1' : 'indigo-9'" label="Docker" />
-                  <q-chip :color="$q.dark.isActive ? 'indigo-9' : 'indigo-1'" :text-color="$q.dark.isActive ? 'indigo-1' : 'indigo-9'" label="Cloud Architectures" />
+                  <q-chip 
+                    v-for="skill in technicalSkills" 
+                    :key="skill"
+                    :color="$q.dark.isActive ? 'indigo-9' : 'indigo-1'" 
+                    :text-color="$q.dark.isActive ? 'indigo-1' : 'indigo-9'" 
+                    :label="skill" 
+                  />
                 </div>
               </div>
 
@@ -130,24 +144,14 @@
               <div class="q-mb-md">
                 <div class="text-subtitle1 text-weight-medium q-mb-sm">Soft Skills</div>
                 <div class="q-gutter-xs">
-                  <q-chip :color="$q.dark.isActive ? 'teal-9' : 'teal-1'" :text-color="$q.dark.isActive ? 'teal-1' : 'teal-9'" label="Problem Solving" />
-                  <q-chip :color="$q.dark.isActive ? 'teal-9' : 'teal-1'" :text-color="$q.dark.isActive ? 'teal-1' : 'teal-9'" label="Communication" />
-                  <q-chip :color="$q.dark.isActive ? 'teal-9' : 'teal-1'" :text-color="$q.dark.isActive ? 'teal-1' : 'teal-9'" label="Team Leadership" />
-                  <q-chip :color="$q.dark.isActive ? 'teal-9' : 'teal-1'" :text-color="$q.dark.isActive ? 'teal-1' : 'teal-9'" label="Adaptability" />
+                  <q-chip 
+                    v-for="skill in softSkills" 
+                    :key="skill"
+                    :color="$q.dark.isActive ? 'teal-9' : 'teal-1'" 
+                    :text-color="$q.dark.isActive ? 'teal-1' : 'teal-9'" 
+                    :label="skill" 
+                  />
                 </div>
-              </div>
-
-              <q-separator class="q-my-md" />
-
-              <div class="text-center q-mt-lg">
-                <q-btn
-                  color="primary"
-                  icon="download"
-                  label="Download Full CV"
-                  to="/cv"
-                  unelevated
-                  class="full-width"
-                />
               </div>
             </q-card-section>
           </q-card>
@@ -158,7 +162,24 @@
 </template>
 
 <script setup lang="ts">
-// Logic for about page
+const technicalSkills = [
+  'Proxmox VE',
+  'Proxmox Backup Server',
+  'TrueNAS',
+  'Infrastructure as Code (Terraform / Ansible)',
+  'Docker',
+  'Kubernetes',
+  'TypeScript',
+  'Vue.js / Quasar',
+  'Python',
+];
+
+const softSkills = [
+  'Problem Solving',
+  'Communication',
+  'Team Leadership',
+  'Adaptability'
+];
 </script>
 
 <style lang="scss">

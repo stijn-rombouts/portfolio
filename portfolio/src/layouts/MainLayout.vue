@@ -94,7 +94,7 @@
       </router-view>
     </q-page-container>
 
-    <q-footer class="transparent text-grey-7 q-pa-md text-center">
+    <q-footer class="glass-footer q-pa-md text-center">
       <div>&copy; {{ new Date().getFullYear() }} Stijn Rombouts.</div>
     </q-footer>
   </q-layout>
