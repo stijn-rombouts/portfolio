@@ -1,0 +1,49 @@
+// app global css in SCSS form
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root {
+  --bg-color: #f8fafc;
+  --text-main: #1e293b;
+  --text-secondary: #334155;
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.12);
+  --header-bg: rgba(15, 23, 42, 0.82);
+  --primary-color: #6366f1;
+}
+
+.body--dark {
+  --bg-color: #0f172a;
+  --text-main: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --card-bg: #1e293b;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --header-bg: rgba(2, 6, 23, 0.85);
+  --primary-color: #818cf8;
+}
+
+.bg-slate-50 {
+  background-color: var(--bg-color) !important;
+}
+
+.text-slate-800 {
+  color: var(--text-main) !important;
+}
+
+.text-slate-700 {
+  color: var(--text-secondary) !important;
+}
+
+.shadow-2 {
+  box-shadow: 0 4px 6px -1px var(--card-border), 0 2px 4px -2px var(--card-border) !important;
+}
+
+.glass-header {
+  background: var(--header-bg) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--card-border);
+}
