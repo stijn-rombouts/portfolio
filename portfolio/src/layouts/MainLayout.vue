@@ -26,28 +26,28 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" side="left" bordered class="bg-grey-1">
-      <q-list>
-        <q-item-label header>Navigation</q-item-label>
-        <q-item clickable v-ripple to="/" active-class="bg-indigo-1 text-primary" exact>
+    <q-drawer v-model="leftDrawerOpen" side="left" bordered :class="$q.dark.isActive ? 'bg-dark' : 'bg-grey-1'">
+      <q-list :dark="$q.dark.isActive">
+        <q-item-label header :class="$q.dark.isActive ? 'text-grey-5' : 'text-grey-8'">Navigation</q-item-label>
+        <q-item clickable v-ripple to="/" :active-class="$q.dark.isActive ? 'bg-indigo-10 text-indigo-2' : 'bg-indigo-1 text-primary'" exact>
           <q-item-section avatar>
             <q-icon name="home" />
           </q-item-section>
           <q-item-section>Home</q-item-section>
         </q-item>
-        <q-item clickable v-ripple to="/about" active-class="bg-indigo-1 text-primary">
+        <q-item clickable v-ripple to="/about" :active-class="$q.dark.isActive ? 'bg-indigo-10 text-indigo-2' : 'bg-indigo-1 text-primary'">
           <q-item-section avatar>
             <q-icon name="person" />
           </q-item-section>
           <q-item-section>About Me</q-item-section>
         </q-item>
-        <q-item clickable v-ripple to="/projects" active-class="bg-indigo-1 text-primary">
+        <q-item clickable v-ripple to="/projects" :active-class="$q.dark.isActive ? 'bg-indigo-10 text-indigo-2' : 'bg-indigo-1 text-primary'">
           <q-item-section avatar>
             <q-icon name="work" />
           </q-item-section>
           <q-item-section>Projects</q-item-section>
         </q-item>
-        <q-item clickable v-ripple to="/cv" active-class="bg-indigo-1 text-primary">
+        <q-item clickable v-ripple to="/cv" :active-class="$q.dark.isActive ? 'bg-indigo-10 text-indigo-2' : 'bg-indigo-1 text-primary'">
           <q-item-section avatar>
             <q-icon name="description" />
           </q-item-section>
