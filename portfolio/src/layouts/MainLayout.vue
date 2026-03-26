@@ -11,47 +11,22 @@
           <q-btn flat no-caps label="About Me" to="/about" :class="{ 'active': $route.path === '/about' }" />
           <q-btn flat no-caps label="Projects" to="/projects" :class="{ 'active': $route.path === '/projects' }" />
           <q-btn flat no-caps label="View CV" to="/cv" :class="{ 'active': $route.path === '/cv' }" class="q-px-md" />
-          
-          <q-btn
-            flat
-            round
-            dense
-            :icon="$q.dark.isActive ? 'light_mode' : 'dark_mode'"
-            class="q-ml-md"
-            @click="toggleDarkMode"
-            aria-label="Toggle dark mode"
-          >
+
+          <q-btn flat round dense :icon="$q.dark.isActive ? 'light_mode' : 'dark_mode'" class="q-ml-md"
+            @click="toggleDarkMode" aria-label="Toggle dark mode">
             <q-tooltip>{{ $q.dark.isActive ? 'Switch to Light Mode' : 'Switch to Dark Mode' }}</q-tooltip>
           </q-btn>
         </div>
 
         <div class="lt-md row items-center">
-          <q-btn
-            flat
-            round
-            dense
-            :icon="$q.dark.isActive ? 'light_mode' : 'dark_mode'"
-            class="q-mr-sm"
-            @click="toggleDarkMode"
-          />
-          <q-btn
-            flat
-            dense
-            round
-            icon="menu"
-            aria-label="Menu"
-            @click="toggleLeftDrawer"
-          />
+          <q-btn flat round dense :icon="$q.dark.isActive ? 'light_mode' : 'dark_mode'" class="q-mr-sm"
+            @click="toggleDarkMode" />
+          <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
         </div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      side="left"
-      bordered
-      class="bg-grey-1"
-    >
+    <q-drawer v-model="leftDrawerOpen" side="left" bordered class="bg-grey-1">
       <q-list>
         <q-item-label header>Navigation</q-item-label>
         <q-item clickable v-ripple to="/" active-class="bg-indigo-1 text-primary" exact>
@@ -83,12 +58,7 @@
 
     <q-page-container>
       <router-view v-slot="{ Component }">
-        <transition
-          appear
-          enter-active-class="animated fadeIn"
-          leave-active-class="animated fadeOut"
-          mode="out-in"
-        >
+        <transition appear enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" mode="out-in">
           <component :is="Component" />
         </transition>
       </router-view>
@@ -145,6 +115,7 @@ function toggleLeftDrawer() {
 .nav-link-active {
   font-weight: 700;
   position: relative;
+
   &::after {
     content: '';
     position: absolute;
@@ -158,26 +129,12 @@ function toggleLeftDrawer() {
 }
 
 .active {
-  color: #818cf8 !important; /* Indigo 400 */
+  color: #818cf8 !important;
+  /* Indigo 400 */
   @extend .nav-link-active;
-  &::after { background: #818cf8; }
-}
 
-.active-about {
-  color: #2dd4bf !important; /* Teal 400 */
-  @extend .nav-link-active;
-  &::after { background: #2dd4bf; }
-}
-
-.active-projects {
-  color: #fbbf24 !important; /* Amber 400 */
-  @extend .nav-link-active;
-  &::after { background: #fbbf24; }
-}
-
-.active-cv {
-  color: #f472b6 !important; /* Pink 400 */
-  @extend .nav-link-active;
-  &::after { background: #f472b6; }
+  &::after {
+    background: #818cf8;
+  }
 }
 </style>
