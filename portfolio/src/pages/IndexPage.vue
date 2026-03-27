@@ -90,6 +90,7 @@
   border-radius: 50%;
   filter: blur(80px);
   z-index: 1;
+  pointer-events: none;
 }
 
 .circle-1 {
