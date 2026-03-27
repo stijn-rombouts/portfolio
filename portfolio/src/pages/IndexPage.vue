@@ -5,14 +5,15 @@
         <h1 class="text-weight-bold q-mb-md gradient-text responsive-title">
           Welcome to My Portfolio
         </h1>
-        <p class="text-h5 q-mb-xl line-height-1-6 text-white">
+        <p class="text-h5 q-mb-xl line-height-1-6 hero-subtitle">
           Hello, I'm <span class="text-primary text-weight-medium text-glow">Stijn Rombouts</span>. <br />
           Highly motivated Applied Computer Science student with a passion for building innovative and efficient digital
           solutions.
         </p>
         <div class="q-gutter-sm flex flex-center">
           <q-btn unelevated color="primary" label="About Me" size="lg" to="/about" class="q-px-xl" />
-          <q-btn outline color="white" label="View CV" size="lg" to="/cv" class="q-px-xl" />
+          <q-btn outline :color="$q.dark.isActive ? 'white' : 'primary'" label="View CV" size="lg" to="/cv"
+            class="q-px-xl" />
         </div>
       </div>
     </div>
@@ -31,10 +32,15 @@
 .hero-page {
   overflow: hidden;
   position: relative;
-  background-image: url('/home.jpg');
+  background-image: url('/home_light.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  min-height: 100vh;
+  display: flex !important;
+  flex-direction: column;
 
   &::before {
     content: '';
@@ -43,8 +49,23 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(1.5px);
     z-index: 0;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  }
+}
+
+.body--dark .hero-page {
+  background-image: url('/home_dark.png');
+  background-color: #0f172a;
+  /* Fallback for dark mode */
+
+  &::before {
+    background: rgba(0, 0, 0, 0.4);
+    /* Subtle overlay for dark mode to avoid boxiness */
+    backdrop-filter: none !important;
+    /* Disabling blur in dark mode as it may cause visual artifacts or "rectangle" issues */
   }
 }
 
@@ -53,14 +74,35 @@
   z-index: 1;
 }
 
+.hero-subtitle {
+  color: #0f172a;
+  /* Even darker for light mode readability */
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+}
+
+.body--dark .hero-subtitle {
+  color: var(--text-main);
+}
+
 .text-glow {
   text-shadow: 0 0 10px rgba(var(--q-primary), 0.5);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #818cf8 100%);
+  display: inline-block;
+  background: linear-gradient(135deg, #000000 0%, var(--primary-color) 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.body--dark .gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, var(--primary-color) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .responsive-title {
