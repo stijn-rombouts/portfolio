@@ -19,8 +19,8 @@
           <div class="q-mt-lg flex items-center q-gutter-sm">
             <q-chip outline color="primary" icon="school" label="Digital Innovation" />
             <q-chip outline color="secondary" icon="place" label="Belgium" />
-            <q-chip clickable outline :color="$q.dark.isActive ? 'white' : 'dark'" icon="mdi-github" icon-right="open_in_new" label="GitHub" tag="a"
-              href="https://github.com/stijn-rombouts" target="_blank" />
+            <q-chip clickable outline :color="$q.dark.isActive ? 'white' : 'dark'" icon="mdi-github" icon-right="open_in_new" label="GitHub"
+              @click="() => window.open('https://github.com/stijn-rombouts', '_blank', 'noopener,noreferrer')" />
           </div>
         </div>
       </div>
