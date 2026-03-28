@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     id: 'skill2-semester-1',
     name: 'Medication Support System (SKIL2 Semester 1)',
-    icon: '/projects/skill2_1/skill2_1.png',
+    icon: '/projects/skill2_1/skill2_1.webp',
     github: 'https://github.com/stijn-rombouts/skill-2-project-week/',
     description: 'A safe and reliable medication support system for elderly users and caregivers.',
     status: 'Finished',
@@ -40,7 +40,7 @@ export const projects: Project[] = [
   {
     id: 'custom-amplifier',
     name: 'Custom Multi-Zone Amplifier',
-    icon: '/projects/amplifier/overview.png',
+    icon: '/projects/amplifier/overview.webp',
     github: 'https://github.com/Core-i99/diy-muli-zone-amplifier',
     description: 'Custom-built multi-zone audio amplifier with an ESP32-based controller',
     status: 'Finished but still improving',
@@ -49,7 +49,7 @@ export const projects: Project[] = [
   {
     id: 'interest-test',
     name: 'The Interest Test',
-    icon: '/projects/mpi/test.png',
+    icon: '/projects/mpi/test.webp',
     github: 'https://github.com/Thomas-More-Digital-Innovation/2526-MPI-001-Employment-Interest-Tool',
     description: 'A behavior-driven visual test for people with disabilities, developed for MPI Oosterloo.',
     status: 'Finished',

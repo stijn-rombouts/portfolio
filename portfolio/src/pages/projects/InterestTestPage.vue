@@ -1,5 +1,5 @@
 <template>
-  <ProjectPageLayout name="The Interest Test" icon="/projects/mpi/test.png" status="Finished"
+  <ProjectPageLayout name="The Interest Test" icon="/projects/mpi/test.webp" status="Finished"
     github="https://github.com/Thomas-More-Digital-Innovation/2526-MPI-001-Employment-Interest-Tool"
     :technologies="['PHP', 'Laravel', 'MySQL', 'Redis', 'Pest Stress Testing', 'Pest Browser Testing']">
 
@@ -41,7 +41,7 @@
           <div class="row q-col-gutter-lg">
             <div class="col-12 col-md-12">
               <q-card flat bordered class="overflow-hidden">
-                <ImageLightbox src="/projects/mpi/test.png" alt="Testing Interface" class="full-width" />
+                <ImageLightbox src="/projects/mpi/test.webp" alt="Testing Interface" class="full-width" />
                 <q-card-section>
                   <div class="text-subtitle1 text-weight-bold">Test Interface</div>
                 </q-card-section>
@@ -49,7 +49,7 @@
             </div>
             <div class="col-12">
               <q-card flat bordered class="overflow-hidden">
-                <ImageLightbox src="/projects/mpi/result.png" alt="Result Dashboard" class="full-width" />
+                <ImageLightbox src="/projects/mpi/result.webp" alt="Result Dashboard" class="full-width" />
                 <q-card-section>
                   <div class="text-subtitle1 text-weight-bold">Test Result</div>
                 </q-card-section>
@@ -57,7 +57,7 @@
             </div>
             <div class="col-12">
               <q-card flat bordered class="overflow-hidden">
-                <ImageLightbox src="/projects/mpi/use-case-diagram.jpeg" alt="Use Case Diagram" class="full-width" />
+                <ImageLightbox src="/projects/mpi/use-case-diagram.webp" alt="Use Case Diagram" class="full-width" />
                 <q-card-section>
                   <div class="text-subtitle1 text-weight-bold">Use case diagram</div>
                 </q-card-section>

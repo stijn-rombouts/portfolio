@@ -1,5 +1,5 @@
 <template>
-  <ProjectPageLayout name="Custom Multi-Zone Amplifier" icon="/projects/amplifier/overview.png"
+  <ProjectPageLayout name="Custom Multi-Zone Amplifier" icon="/projects/amplifier/overview.webp"
     status="Finished but still improving" github="https://github.com/Core-i99/diy-muli-zone-amplifier"
     :technologies="['ESP32', 'ATTINY44', 'I2S Audio', 'SPI', 'I2C', 'Analog Electronics', 'CAD/CNC']">
 
@@ -20,12 +20,12 @@
 
       <div class="row q-col-gutter-xl q-mb-xl">
         <div class="col-12 col-md-6">
-          <ImageLightbox src="/projects/amplifier/closed.png" alt="Complete MDF Enclosure (Front View)"
+          <ImageLightbox src="/projects/amplifier/closed.webp" alt="Complete MDF Enclosure (Front View)"
             class="rounded-borders" />
           <div class="text-caption text-center q-mt-sm">Complete MDF Enclosure (Front View)</div>
         </div>
         <div class="col-12 col-md-6">
-          <ImageLightbox src="/projects/amplifier/back.png" alt="Enclosure (Back View) showing connectors"
+          <ImageLightbox src="/projects/amplifier/back.webp" alt="Enclosure (Back View) showing connectors"
             class="rounded-borders" />
           <div class="text-caption text-center q-mt-sm">Enclosure (Back View) showing connectors</div>
         </div>
@@ -165,7 +165,7 @@
             </p>
           </div>
           <div class="col-12 col-md-7">
-            <ImageLightbox src="/projects/amplifier/topview.png" alt="Top-down design view in CAD"
+            <ImageLightbox src="/projects/amplifier/topview.webp" alt="Top-down design view in CAD"
               class="rounded-borders shadow-3" />
             <div class="text-caption text-center q-mt-sm">Top-down design view in CAD</div>
           </div>
@@ -175,7 +175,7 @@
       <div class="logic-diag-section q-mb-xl">
         <h2 class="text-h4 text-weight-bold q-mb-lg">System Block Diagram</h2>
         <div class="text-center">
-          <ImageLightbox src="/projects/amplifier/drawio.png" alt="System Block Diagram" class="rounded-borders"
+          <ImageLightbox src="/projects/amplifier/drawio.webp" alt="System Block Diagram" class="rounded-borders"
             style="max-width: 800px; width: 100%; margin: 0 auto;" />
           <div class="text-caption text-grey-7 q-mt-md">High-level architectural diagram detailing component
             interconnects.
@@ -187,35 +187,35 @@
         <h2 class="text-h4 text-weight-bold q-mb-lg">Project Gallery</h2>
         <div class="row q-col-gutter-lg">
           <div class="col-12 col-sm-6 col-md-4">
-            <ImageLightbox src="/projects/amplifier/real/IMG20240412110546.jpg" alt="Finished Project Photo 1"
+            <ImageLightbox src="/projects/amplifier/real/IMG20240412110546.webp" alt="Finished Project Photo 1"
               class="rounded-borders hover-scale shadow-2" />
           </div>
           <div class="col-12 col-sm-6 col-md-4">
-            <ImageLightbox src="/projects/amplifier/real/IMG20240506192118.jpg" alt="Finished Project Photo 2"
+            <ImageLightbox src="/projects/amplifier/real/IMG20240506192118.webp" alt="Finished Project Photo 2"
               class="rounded-borders hover-scale shadow-2" />
           </div>
           <div class="col-12 col-sm-6 col-md-4">
-            <ImageLightbox src="/projects/amplifier/real/IMG20240506192202.jpg" alt="Finished Project Photo 3"
+            <ImageLightbox src="/projects/amplifier/real/IMG20240506192202.webp" alt="Finished Project Photo 3"
               class="rounded-borders hover-scale shadow-2" />
           </div>
           <div class="col-12 col-sm-6 col-md-4">
-            <ImageLightbox src="/projects/amplifier/real/IMG20240506192214.jpg" alt="Finished Project Photo 4"
+            <ImageLightbox src="/projects/amplifier/real/IMG20240506192214.webp" alt="Finished Project Photo 4"
               class="rounded-borders hover-scale shadow-2" />
           </div>
           <div class="col-12 col-sm-6 col-md-4">
-            <ImageLightbox src="/projects/amplifier/real/IMG20240506192217.jpg" alt="Finished Project Photo 5"
+            <ImageLightbox src="/projects/amplifier/real/IMG20240506192217.webp" alt="Finished Project Photo 5"
               class="rounded-borders hover-scale shadow-2" />
           </div>
           <div class="col-12 col-sm-6 col-md-4">
-            <ImageLightbox src="/projects/amplifier/real/IMG20240506192222.jpg" alt="Finished Project Photo 6"
+            <ImageLightbox src="/projects/amplifier/real/IMG20240506192222.webp" alt="Finished Project Photo 6"
               class="rounded-borders hover-scale shadow-2" />
           </div>
           <div class="col-12 col-sm-6 col-md-4">
-            <ImageLightbox src="/projects/amplifier/real/IMG20240506192235.jpg" alt="Finished Project Photo 7"
+            <ImageLightbox src="/projects/amplifier/real/IMG20240506192235.webp" alt="Finished Project Photo 7"
               class="rounded-borders hover-scale shadow-2" />
           </div>
           <div class="col-12 col-sm-6 col-md-4">
-            <ImageLightbox src="/projects/amplifier/real/IMG20240506192246.jpg" alt="Finished Project Photo 8"
+            <ImageLightbox src="/projects/amplifier/real/IMG20240506192246.webp" alt="Finished Project Photo 8"
               class="rounded-borders hover-scale shadow-2" />
           </div>
         </div>

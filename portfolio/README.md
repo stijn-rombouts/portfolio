@@ -2,6 +2,9 @@
 
 Portfolio
 
+### Resize images
+`magick mogrify -format webp -resize "1920x1920>" -define webp:extent=300kb *.{jpg,jpeg,png,JPG,PNG}(N)`
+
 ## Install the dependencies
 ```bash
 yarn
