@@ -41,9 +41,9 @@
 
                 <div class="sidebar-info-item q-mb-lg">
                   <div class="text-subtitle2 text-grey-7 q-mb-xs">Status</div>
-                  <q-chip :color="getStatusColor(status)" text-color="white" size="md" class="text-weight-bold">
+                  <div :class="['status-chip', getStatusClass(status)]">
                     {{ status }}
-                  </q-chip>
+                  </div>
                 </div>
 
                 <div class="sidebar-info-item q-mb-lg">
@@ -81,16 +81,16 @@ defineProps<{
 }>();
 
 
-const getStatusColor = (status: string) => {
+const getStatusClass = (status: string) => {
   switch (status) {
     case 'Finished':
-      return 'positive';
+      return 'status-finished';
     case 'In Progress':
-      return 'orange';
+      return 'status-progress';
     case 'Finished but still improving':
-      return 'info';
+      return 'status-improving';
     default:
-      return 'grey';
+      return '';
   }
 };
 </script>

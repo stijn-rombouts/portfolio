@@ -33,9 +33,9 @@
             </q-card-section>
 
             <q-card-actions class="q-px-md q-pb-md justify-between">
-              <q-chip :color="getStatusColor(project.status)" text-color="white" size="sm" class="text-weight-bold">
+              <div :class="['status-chip', getStatusClass(project.status)]">
                 {{ project.status }}
-              </q-chip>
+              </div>
               <q-btn flat color="primary" label="View Details" icon-right="arrow_forward" no-caps />
             </q-card-actions>
           </q-card>
@@ -48,16 +48,16 @@
 <script setup lang="ts">
 import { projects } from 'src/data/projects';
 
-const getStatusColor = (status: string) => {
+const getStatusClass = (status: string) => {
   switch (status) {
     case 'Finished':
-      return 'positive';
+      return 'status-finished';
     case 'In Progress':
-      return 'orange';
+      return 'status-progress';
     case 'Finished but still improving':
-      return 'info';
+      return 'status-improving';
     default:
-      return 'grey';
+      return '';
   }
 };
 
