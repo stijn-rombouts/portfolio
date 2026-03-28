@@ -32,7 +32,7 @@
 .hero-page {
   overflow: hidden;
   position: relative;
-  background-image: url('/home_light.png');
+  background-image: url('/home_light.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -57,7 +57,7 @@
 }
 
 .body--dark .hero-page {
-  background-image: url('/home_dark.png');
+  background-image: url('/home_dark.webp');
   background-color: #0f172a;
   /* Fallback for dark mode */
 

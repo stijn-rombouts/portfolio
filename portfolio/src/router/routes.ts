@@ -9,6 +9,13 @@ const routes: RouteRecordRaw[] = [
       { path: 'about', component: () => import('pages/AboutPage.vue') },
       { path: 'cv', component: () => import('pages/CvPage.vue') },
       { path: 'projects', component: () => import('pages/ProjectsPage.vue') },
+      /* Custom project routes */
+      { path: 'projects/skill2-semester-1', component: () => import('pages/projects/Skill2-1Page.vue') },
+      { path: 'projects/skill2-semester-2', component: () => import('pages/projects/Skill2-2Page.vue') },
+      { path: 'projects/custom-amplifier', component: () => import('pages/projects/AmplifierPage.vue') },
+      { path: 'projects/personal-portfolio', component: () => import('pages/projects/PortfolioPage.vue') },
+      { path: 'projects/interest-test', component: () => import('pages/projects/InterestTestPage.vue') },
+      { path: 'projects/:id', component: () => import('pages/ProjectDetailsPage.vue'), props: true },
     ],
   },
 
