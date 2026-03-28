@@ -45,6 +45,15 @@ export const projects: Project[] = [
     description: 'Custom-built multi-zone audio amplifier with an ESP32-based controller',
     status: 'Finished but still improving',
     technologies: ['ESP32', 'ATTINY44', 'I2S Audio', 'SPI', 'I2C', 'Analog Electronics', 'CAD/CNC']
+  },
+  {
+    id: 'interest-test',
+    name: 'The Interest Test',
+    icon: '/projects/mpi/test.png',
+    github: 'https://github.com/Thomas-More-Digital-Innovation/2526-MPI-001-Employment-Interest-Tool',
+    description: 'A behavior-driven visual test for people with disabilities, developed for MPI Oosterloo.',
+    status: 'Finished',
+    technologies: ['PHP', 'Laravel', 'MySQL', 'Redis', 'Pest Stress Testing', 'Pest Browser Testing']
   }
 ];
 
