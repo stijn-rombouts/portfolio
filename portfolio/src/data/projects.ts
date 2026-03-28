@@ -28,9 +28,17 @@ export const projects: Project[] = [
   {
     id: 'personal-portfolio',
     name: 'Personal Portfolio',
-    icon: '/icons/favicon-128x128.png',
+    icon: '/projects/portfolio/image.png',
     github: 'https://github.com/stijn-rombouts/portfolio/',
     description: 'My personal portfolio website, built with Vue 3, Quasar, and Vite.',
     technologies: ['Vue.js', 'Quasar', 'Vite', 'TypeScript']
+  },
+  {
+    id: 'custom-amplifier',
+    name: 'Custom Multi-Zone Amplifier',
+    icon: '/projects/amplifier/overview.png',
+    github: 'https://github.com/Core-i99/diy-muli-zone-amplifier',
+    description: 'A professional-grade, custom-built multi-zone audio amplifier with an ESP32-based controller, ATTINY-driven zone management, and sophisticated power and input modules.',
+    technologies: ['ESP32', 'ATTINY44', 'I2S Audio', 'SPI', 'I2C', 'Analog Electronics', 'CAD/CNC']
   }
 ];

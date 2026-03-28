@@ -1,5 +1,5 @@
 <template>
-  <ProjectPageLayout name="Personal Portfolio" icon="/icons/favicon-128x128.png"
+  <ProjectPageLayout name="Personal Portfolio" icon="/projects/portfolio/image.png"
     github="https://github.com/stijn-rombouts/portfolio/" :technologies="['Vue.js', 'Quasar', 'Vite', 'TypeScript']">
     <template #default>
       <h2 class="text-h4 text-weight-bold q-mb-md">About This Project</h2>
