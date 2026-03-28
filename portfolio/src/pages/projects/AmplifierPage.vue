@@ -37,11 +37,13 @@
               <q-card-section>
                 <div class="text-h6 text-weight-bold text-primary">Motherboard (Master)</div>
                 <div class="text-body1 text-grey-8">
-                  Centered around an <strong>ESP32 Dev Kit C</strong>, this module handles the high-level logic, user input
+                  Centered around an <strong>ESP32 Dev Kit C</strong>, this module handles the high-level logic, user
+                  input
                   from
-                  the main rotary encoder, and the <strong>ILI9488 SPI</strong> display. It manages digital-to-analog audio
+                  the main rotary encoder, and the <strong>ILI9488 SPI</strong> display. It manages digital-to-analog
+                  audio
                   conversion
-                  via a <strong>PCM5102A I2S module</strong> and communicates with sub-modules through I2C.
+                  via a <strong>PCM5102A I2S module</strong> and communicates with the Zone Controllers through I2C.
                 </div>
               </q-card-section>
             </q-card>
@@ -51,7 +53,8 @@
               <q-card-section>
                 <div class="text-h6 text-weight-bold text-secondary">Zone Controllers</div>
                 <div class="text-body1 text-grey-8">
-                  Each zone is controlled by an <strong>ATTINY44</strong> microcontroller. These modules manage localized
+                  Each zone is controlled by an <strong>ATTINY44</strong> microcontroller. These modules manage
+                  localized
                   volume control using <strong>X9C103S digital potentiometers</strong> and use relays for speaker
                   management. They communicate with the motherboard via I2C using JST XH connectors.
                 </div>
@@ -85,6 +88,69 @@
         </div>
       </div>
 
+      <div
+        class="current-state-section q-mb-xl q-pa-xl bg-deep-purple-1 rounded-borders relative-position overflow-hidden">
+        <div class="absolute-top-right q-pa-md rotate-12 opacity-20">
+          <q-icon name="smart_home" size="120px" color="deep-purple-9" />
+        </div>
+        <h2 class="text-h4 text-weight-bold q-mb-md">Current State & Next Generation</h2>
+        <div class="row q-col-gutter-xl items-center">
+          <div class="col-12 col-md-7">
+            <p class="text-body1 text-grey-9 q-mb-lg">
+              The project is currently evolving from its initial ESP32-based design to a more powerful,
+              network-integrated
+              multimedia hub. Recent upgrades have significantly expanded its capabilities:
+            </p>
+            <q-list class="q-gutter-y-sm">
+              <q-item class="bg-white rounded-borders shadow-1">
+                <q-item-section avatar>
+                  <q-icon name="memory" color="deep-purple-9" />
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label class="text-weight-bold">Raspberry Pi 3 Upgrade</q-item-label>
+                  <q-item-label caption>The ESP32 has been replaced by a <strong>Raspberry Pi 3</strong>, providing a
+                    much more robust platform for complex audio processing and network management. A dedicated power
+                    supply was added to handle the higher current requirements.</q-item-label>
+                </q-item-section>
+              </q-item>
+              <q-item class="bg-white rounded-borders shadow-1">
+                <q-item-section avatar>
+                  <q-icon name="hub" color="deep-purple-9" />
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label class="text-weight-bold">MQTT & Home Assistant Integration</q-item-label>
+                  <q-item-label caption>The amplifier is now being integrated into the <strong>Home Assistant</strong>
+                    ecosystem via <strong>MQTT</strong>. This allows for centralized control of all audio functions
+                    across the smart home.</q-item-label>
+                </q-item-section>
+              </q-item>
+              <q-item class="bg-white rounded-borders shadow-1">
+                <q-item-section avatar>
+                  <q-icon name="code" color="deep-purple-9" />
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label class="text-weight-bold">Python-Powered Core</q-item-label>
+                  <q-item-label caption>All current logic on the RPi is implemented in <strong>Python</strong>, managing
+                    everything from input selection to per-zone volume levels and internet radio
+                    streaming.</q-item-label>
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </div>
+          <div class="col-12 col-md-5 text-center">
+            <q-card flat bordered class="q-pa-lg text-deep-purple-9"
+              style="background: rgba(255,255,255,0.5); backdrop-filter: blur(4px);">
+              <q-icon name="settings_remote" size="80px" class="q-mb-md" />
+              <div class="text-h6 text-weight-bold">Real-time Control</div>
+              <p class="text-body2 q-mt-sm">
+                Remotely set radio stations, toggle inputs, and adjust volume for every individual zone
+                straight from the Home Assistant dashboard or mobile app.
+              </p>
+            </q-card>
+          </div>
+        </div>
+      </div>
+
       <div class="design-section q-mb-xl q-pa-xl bg-blue-grey-1 rounded-borders relative-position">
         <h2 class="text-h4 text-weight-bold q-mb-md">Enclosure & CAD Design</h2>
         <div class="row q-col-gutter-xl items-center">
@@ -109,7 +175,8 @@
         <div class="text-center">
           <ImageLightbox src="/projects/amplifier/drawio.png" alt="System Block Diagram" class="rounded-borders"
             style="max-width: 800px; width: 100%; margin: 0 auto;" />
-          <div class="text-caption text-grey-7 q-mt-md">High-level architectural diagram detailing component interconnects.
+          <div class="text-caption text-grey-7 q-mt-md">High-level architectural diagram detailing component
+            interconnects.
           </div>
         </div>
       </div>
@@ -185,14 +252,16 @@ import ImageLightbox from 'src/components/ImageLightbox.vue';
 
 .shadow-hover {
   transition: all 0.3s ease;
+
   &:hover {
     transform: scale(1.02);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15) !important;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
   }
 }
 
 .hover-scale {
   transition: transform 0.3s ease;
+
   &:hover {
     transform: scale(1.05);
     z-index: 10;
