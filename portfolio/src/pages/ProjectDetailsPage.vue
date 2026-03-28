@@ -6,8 +6,10 @@
       :name="project.name" 
       :icon="project.icon"
       :github="project.github"
+      :status="project.status"
       :technologies="project.technologies"
     >
+
       <template #default>
         <!-- Standard dynamic content -->
         <h2 class="text-h4 text-weight-bold q-mb-md">About This Project</h2>

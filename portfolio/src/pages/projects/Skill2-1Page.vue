@@ -1,7 +1,9 @@
 <template>
   <ProjectPageLayout name="Medication Support System (SKIL2 Semester 1)" icon="/projects/skill2_1/skill2_1.png"
-    github="https://github.com/stijn-rombouts/skill-2-project-week/"
+    status="Finished" github="https://github.com/stijn-rombouts/skill-2-project-week/"
+
     :technologies="['Vue.js', 'Quasar', 'Mobile App', 'Security']">
+
     <template #default>
       <h2 class="text-h4 text-weight-bold q-mb-md">Project Overview</h2>
       <p class="text-h6 text-grey-8 leading-relaxed font-light q-mb-xl">

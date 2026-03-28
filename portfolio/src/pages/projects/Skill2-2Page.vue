@@ -1,6 +1,8 @@
 <template>
   <ProjectPageLayout name="Hosting Platform (SKIL2 Semester 2)" icon="/projects/skill2_2/RKE2.png"
-    :technologies="['RKE2', 'Kubernetes', 'Longhorn', 'Rancher', 'GitHub Actions', 'Grafana', 'OPNsense']">
+    status="In Progress" :technologies="['RKE2', 'Kubernetes', 'Longhorn', 'Rancher', 'GitHub Actions', 'Grafana', 'OPNsense']">
+
+
     <template #default>
       <div class="row q-col-gutter-xl">
         <div class="col-12">

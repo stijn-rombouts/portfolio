@@ -1,7 +1,9 @@
 <template>
   <ProjectPageLayout name="Custom Multi-Zone Amplifier" icon="/projects/amplifier/overview.png"
-    github="https://github.com/Core-i99/diy-muli-zone-amplifier"
+    status="Finished but still improving" github="https://github.com/Core-i99/diy-muli-zone-amplifier"
     :technologies="['ESP32', 'ATTINY44', 'I2S Audio', 'SPI', 'I2C', 'Analog Electronics', 'CAD/CNC']">
+
+
     <template #default>
       <h2 class="text-h4 text-weight-bold q-mb-md">Project Overview</h2>
       <p class="text-h6 text-grey-8 leading-relaxed font-light q-mb-xl">

@@ -4,6 +4,7 @@ export interface Project {
   icon: string;
   github?: string;
   description: string;
+  status: 'Finished' | 'In Progress' | 'Finished but still improving';
   technologies?: string[];
   images?: string[];
   htmlContent?: string;
@@ -16,13 +17,15 @@ export const projects: Project[] = [
     icon: '/projects/skill2_1/skill2_1.png',
     github: 'https://github.com/stijn-rombouts/skill-2-project-week/',
     description: 'A safe and reliable medication support system for elderly users and caregivers.',
+    status: 'Finished',
     technologies: ['Vue.js', 'Quasar', 'Mobile App'],
   },
   {
     id: 'skill2-semester-2',
     name: 'Hosting Platform (SKIL2 Semester 2)',
     icon: '/projects/skill2_2/RKE2.png',
-    description: 'A complete hosting platform for PHP, Laravel, and Static websites, featuring a managed RKE2 Kubernetes cluster with Rancher.',
+    status: 'In Progress',
+    description: 'A complete hosting platform for PHP, Laravel, and Static websites.',
     technologies: ['RKE2', 'Kubernetes', 'Longhorn', 'Rancher', 'GitHub Actions', 'Grafana', 'OPNsense', 'PHP', 'Laravel']
   },
   {
@@ -31,6 +34,7 @@ export const projects: Project[] = [
     icon: '/projects/portfolio/image.png',
     github: 'https://github.com/stijn-rombouts/portfolio/',
     description: 'My personal portfolio website, built with Vue 3, Quasar, and Vite.',
+    status: 'In Progress',
     technologies: ['Vue.js', 'Quasar', 'Vite', 'TypeScript']
   },
   {
@@ -38,7 +42,9 @@ export const projects: Project[] = [
     name: 'Custom Multi-Zone Amplifier',
     icon: '/projects/amplifier/overview.png',
     github: 'https://github.com/Core-i99/diy-muli-zone-amplifier',
-    description: 'A professional-grade, custom-built multi-zone audio amplifier with an ESP32-based controller, ATTINY-driven zone management, and sophisticated power and input modules.',
+    description: 'Custom-built multi-zone audio amplifier with an ESP32-based controller',
+    status: 'Finished but still improving',
     technologies: ['ESP32', 'ATTINY44', 'I2S Audio', 'SPI', 'I2C', 'Analog Electronics', 'CAD/CNC']
   }
 ];
+

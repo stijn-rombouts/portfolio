@@ -40,6 +40,13 @@
                 <div class="text-h6 q-mb-md font-bold">Project Details</div>
 
                 <div class="sidebar-info-item q-mb-lg">
+                  <div class="text-subtitle2 text-grey-7 q-mb-xs">Status</div>
+                  <q-chip :color="getStatusColor(status)" text-color="white" size="md" class="text-weight-bold">
+                    {{ status }}
+                  </q-chip>
+                </div>
+
+                <div class="sidebar-info-item q-mb-lg">
                   <div class="text-subtitle2 text-grey-7 q-mb-xs">Repository</div>
                   <q-btn v-if="github" :href="github" target="_blank" outline color="primary" class="full-width q-py-sm"
                     icon="mdi-github" label="View on GitHub" icon-right="open_in_new" no-caps />
@@ -63,14 +70,32 @@
   </q-page>
 </template>
 
+
 <script setup lang="ts">
 defineProps<{
   name: string;
   icon?: string;
   github?: string | undefined;
+  status: 'Finished' | 'In Progress' | 'Finished but still improving';
   technologies?: string[] | undefined;
 }>();
+
+
+const getStatusColor = (status: string) => {
+  switch (status) {
+    case 'Finished':
+      return 'positive';
+    case 'In Progress':
+      return 'orange';
+    case 'Finished but still improving':
+      return 'info';
+    default:
+      return 'grey';
+  }
+};
 </script>
+
+
 
 <style lang="scss" scoped>
 .project-details-page {
