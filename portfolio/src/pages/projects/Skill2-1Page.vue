@@ -1,75 +1,75 @@
 <template>
-  <ProjectPageLayout name="Medication Support System (SKIL2)" icon="/projects/skill2_1/skill2_1.png"
+  <ProjectPageLayout name="Medication Support System (SKIL2 Semester 1)" icon="/projects/skill2_1/skill2_1.png"
     github="https://github.com/stijn-rombouts/skill-2-project-week/"
     :technologies="['Vue.js', 'Quasar', 'Mobile App', 'Security']">
     <template #default>
-      <h2 class="text-h4 text-weight-bold q-mb-md">Project Overzicht</h2>
+      <h2 class="text-h4 text-weight-bold q-mb-md">Project Overview</h2>
       <p class="text-h6 text-grey-8 leading-relaxed font-light q-mb-xl">
-        Dit project is ontwikkeld tijdens de SKIL2 projectweek bij Thomas More Geel. Het doel was het creëren van een
-        veilig, betrouwbaar en gebruiksvriendelijk Proof of Concept (PoC) voor een medicatie-ondersteuningssysteem,
-        specifiek
-        gericht op oudere gebruikers en hun mantelzorgers.
+        This project was developed during the SKIL2 project week at Thomas More Geel. The goal was to create a
+        secure, reliable, and user-friendly Proof of Concept (PoC) for a medication support system,
+        specifically
+        aimed at elderly users and their caregivers.
       </p>
 
       <div class="row q-col-gutter-xl q-mb-xl">
         <div class="col-12 col-md-4">
           <q-card flat bordered class="user-role-card q-pa-lg text-center">
             <q-icon name="elderly" size="lg" color="primary" />
-            <h3 class="text-h5 text-weight-bold q-my-sm">Oudere Gebruiker</h3>
-            <p class="text-body1 text-grey-7">Eenvoudige interface voor herinneringen (ook spraak) en innamebevestiging
-              via knop of stem.</p>
+            <h3 class="text-h5 text-weight-bold q-my-sm">Elderly User</h3>
+            <p class="text-body1 text-grey-7">Simple interface for reminders (including voice) and intake confirmation
+              via button or voice.</p>
           </q-card>
         </div>
         <div class="col-12 col-md-4">
           <q-card flat bordered class="user-role-card q-pa-lg text-center">
             <q-icon name="family_restroom" size="lg" color="secondary" />
-            <h3 class="text-h5 text-weight-bold q-my-sm">Mantelzorger</h3>
-            <p class="text-body1 text-grey-7">Opvolging van innames, beheer van schema's en automatische e-mail
-              notificaties bij gemiste innames.</p>
+            <h3 class="text-h5 text-weight-bold q-my-sm">Caregiver</h3>
+            <p class="text-body1 text-grey-7">Monitoring of intakes, management of schedules, and automatic email
+              notifications for missed intakes.</p>
           </q-card>
         </div>
         <div class="col-12 col-md-4">
           <q-card flat bordered class="user-role-card q-pa-lg text-center">
             <q-icon name="medical_services" size="lg" color="accent" />
-            <h3 class="text-h5 text-weight-bold q-my-sm">Zorgverlener</h3>
-            <p class="text-body1 text-grey-7">Gedetailleerd overzicht van inname-historiek en de mogelijkheid om
-              medische schema's aan te passen.</p>
+            <h3 class="text-h5 text-weight-bold q-my-sm">Healthcare Professional</h3>
+            <p class="text-body1 text-grey-7">Detailed overview of intake history and the ability to adjust
+              medical schedules.</p>
           </q-card>
         </div>
       </div>
 
       <div class="security-priority-section q-mb-xl q-pa-xl bg-orange-1 rounded-borders">
         <h2 class="text-h4 text-weight-bold q-mb-md"><q-icon name="security" class="q-mr-sm" />Security &
-          Betrouwbaarheid</h2>
+          Reliability</h2>
         <div class="row q-col-gutter-md">
           <div class="col-12 col-sm-6">
-            <div class="text-h6 font-bold q-mb-xs">Veilige Toegang</div>
-            <p class="text-body1">Implementatie van 2FA-authenticatie en Role Based Access Control (RBAC) voor alle
-              gebruikersrollen.</p>
+            <div class="text-h6 font-bold q-mb-xs">Secure Access</div>
+            <p class="text-body1">Implementation of 2FA authentication and Role Based Access Control (RBAC) for all
+              user roles.</p>
           </div>
           <div class="col-12 col-sm-6">
-            <div class="text-h6 font-bold q-mb-xs">Altijd Beschikbaar</div>
-            <p class="text-body1">Offline-first architectuur met versleutelde lokale opslag en automatische
-              synchronisatie na herverbinding.</p>
+            <div class="text-h6 font-bold q-mb-xs">Always Available</div>
+            <p class="text-body1">Offline-first architecture with encrypted local storage and automatic
+              synchronization after reconnection.</p>
           </div>
         </div>
       </div>
 
       <div class="roadmap-section q-mb-xl">
-        <h2 class="text-h4 text-weight-bold q-mb-lg">Ontwikkelingstraject:</h2>
+        <h2 class="text-h4 text-weight-bold q-mb-lg">Development Roadmap:</h2>
         <q-timeline color="primary">
-          <q-timeline-entry title="Crawl (Sprint 1 - PoC)" subtitle="Projectweek" icon="directions_walk">
-            <div>Focus op de kern: 2FA login, medicatieschema's bekijken, offline bevestiging en monitoring door de
-              mantelzorger.</div>
+          <q-timeline-entry title="Crawl (Sprint 1 - PoC)" subtitle="Project Week" icon="directions_walk">
+            <div>Focus on the core: 2FA login, viewing medication schedules, offline confirmation, and monitoring by the
+              caregiver.</div>
           </q-timeline-entry>
 
-          <q-timeline-entry title="Walk" subtitle="Fase 2" icon="transfer_within_a_station">
-            <div>Uitbreiding met rapportage-exports, verbeterde synchronisatie-algoritmes en geavanceerde
-              spraakfunctionaliteit.</div>
+          <q-timeline-entry title="Walk" subtitle="Phase 2" icon="transfer_within_a_station">
+            <div>Expansion with reporting exports, improved synchronization algorithms, and advanced
+              voice functionality.</div>
           </q-timeline-entry>
 
-          <q-timeline-entry title="Run" subtitle="Toekomst" icon="directions_run">
-            <div>Directe koppeling met apotheken/huisartsen en geavanceerde analytics.</div>
+          <q-timeline-entry title="Run" subtitle="Future" icon="directions_run">
+            <div>Direct connection with pharmacies/GPs and advanced analytics.</div>
           </q-timeline-entry>
         </q-timeline>
       </div>
@@ -78,11 +78,11 @@
 
     <template #extra>
       <div class="q-pa-md bg-slate-100 rounded-borders border-dashed">
-        <h4 class="text-h5 text-weight-bold q-mb-md">Proof of Concept Architectuur</h4>
+        <h4 class="text-h5 text-weight-bold q-mb-md">Proof of Concept Architecture</h4>
         <p class="text-body1 text-grey-8">
-          Het systeem bestaat uit een hybride architectuur met een mobiele webapp voor ouderen, een webapplicatie voor
-          beheerders en een beveiligde backend met versleutelde database. Toegang tot de database is afgeschermd en
-          communicatie verloopt uitsluitend via HTTPS.
+          The system consists of a hybrid architecture with a mobile web app for the elderly, a web application for
+          administrators, and a secure backend with an encrypted database. Database access is restricted, and
+          communication occurs exclusively via HTTPS.
         </p>
       </div>
     </template>

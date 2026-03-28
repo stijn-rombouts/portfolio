@@ -12,11 +12,18 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'skill2-semester-1',
-    name: 'Medication Support System (SKIL2)',
+    name: 'Medication Support System (SKIL2 Semester 1)',
     icon: '/projects/skill2_1/skill2_1.png',
     github: 'https://github.com/stijn-rombouts/skill-2-project-week/',
-    description: 'Een veilig en betrouwbaar medicatie-ondersteuningssysteem voor ouderen en mantelzorgers.',
+    description: 'A safe and reliable medication support system for elderly users and caregivers.',
     technologies: ['Vue.js', 'Quasar', 'Mobile App'],
+  },
+  {
+    id: 'skill2-semester-2',
+    name: 'Hosting Platform (SKIL2 Semester 2)',
+    icon: '/projects/skill2_2/RKE2.png',
+    description: 'A complete hosting platform for PHP, Laravel, and Static websites, featuring a managed RKE2 Kubernetes cluster with Rancher.',
+    technologies: ['RKE2', 'Kubernetes', 'Longhorn', 'Rancher', 'GitHub Actions', 'Grafana', 'OPNsense', 'PHP', 'Laravel']
   },
   {
     id: 'personal-portfolio',
