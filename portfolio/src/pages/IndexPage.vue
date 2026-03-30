@@ -49,8 +49,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(1.5px);
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(8px);
     z-index: 0;
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
   }
