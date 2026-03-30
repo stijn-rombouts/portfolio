@@ -2,7 +2,7 @@
   <q-page class="q-pa-xl projects-page-bg">
     <div class="container">
       <div class="text-center q-mb-xl">
-        <h1 class="text-h2 text-weight-bold gradient-text q-mb-md">Projects</h1>
+        <h1 class="text-h2 text-weight-bold gradient-text q-mb-md q-pb-sm">Projects</h1>
         <p class="text-h5 text-grey-7">Explore my work, from academic projects to personal explorations.</p>
       </div>
 
