@@ -1,13 +1,13 @@
 <template>
-  <q-page :class="['flex', 'flex-center', 'cv-page-bg']" class="cv-page-fixed">
-    <div class="cv-view-container shadow-24 q-pa-lg">
+  <q-page :class="[$q.screen.gt.xs ? 'q-pa-xl' : 'q-pa-md', 'about-page-bg']">
+    <div class="container cv-view-container q-pa-lg">
       <div class="cv-header row items-center justify-between full-width q-mb-lg">
         <h1 :class="$q.screen.gt.xs ? 'text-h3' : 'text-h5'" class="text-weight-bold q-ma-none text-slate-800">CV</h1>
         <q-btn outline no-caps color="secondary" label="Download PDF" icon="download" href="/CV_stijnrombouts.pdf"
           target="_blank" download="CV_Stijn_Rombouts.pdf" class="q-px-md" />
       </div>
 
-      <div class="pdf-wrapper">
+      <div class="pdf-wrapper shadow-2">
         <iframe src="/CV_stijnrombouts.pdf#toolbar=0" class="pdf-iframe" title="Stijn Rombouts CV"></iframe>
       </div>
     </div>
@@ -19,17 +19,10 @@
 </script>
 
 <style lang="scss" scoped>
-.cv-page-fixed {
-  height: calc(100vh - 50px); // Basic estimate, Quasar handles min-height
-  overflow: hidden;
-  padding: 24px;
-}
-
 .cv-view-container {
-  max-width: 1000px;
   width: 100%;
-  height: 100%;
-  max-height: 90vh;
+  height: calc(100vh - 150px);
+  max-height: 1100px;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
