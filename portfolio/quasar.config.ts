@@ -2,6 +2,7 @@
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file
 
 import { defineConfig } from '#q-app/wrappers';
+import Sitemap from 'vite-plugin-sitemap';
 
 export default defineConfig((/* ctx */) => {
   return {
@@ -72,7 +73,16 @@ export default defineConfig((/* ctx */) => {
             lintCommand: 'eslint -c ./eslint.config.js "./src*/**/*.{ts,js,mjs,cjs,vue}"',
             useFlatConfig: true
           }
-        }, { server: false }]
+        }, { server: false }],
+        Sitemap({
+          hostname: 'https://stijnrombouts.be',
+          outDir: 'dist/spa',
+          dynamicRoutes: [
+            '/about',
+            '/cv',
+            '/projects'
+          ]
+        })
       ]
     },
 
