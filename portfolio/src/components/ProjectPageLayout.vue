@@ -56,7 +56,7 @@
                 <div v-if="technologies && technologies.length" class="sidebar-info-item q-mb-lg">
                   <div class="text-subtitle2 text-grey-7 q-mb-xs">Technologies</div>
                   <div class="row q-gutter-xs">
-                    <q-chip v-for="tech in technologies" :key="tech" color="primary" text-color="white" size="sm">
+                    <q-chip v-for="tech in technologies" :key="tech" color="primary" text-color="white" size="md">
                       {{ tech }}
                     </q-chip>
                   </div>
