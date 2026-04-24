@@ -98,7 +98,7 @@ function toggleLeftDrawer() {
 
 <style lang="scss">
 .glass-header {
-  background: rgba(15, 23, 42, 0.8) !important;
+  background: rgb(15, 23, 42) !important;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
