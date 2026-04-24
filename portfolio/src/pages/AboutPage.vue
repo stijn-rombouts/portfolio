@@ -155,6 +155,7 @@ const technicalSkills = [
   'TypeScript',
   'Vue.js / Quasar',
   'Python',
+  'NixOS'
 ];
 
 const softSkills = [
