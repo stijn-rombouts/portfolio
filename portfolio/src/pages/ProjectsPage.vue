@@ -22,11 +22,11 @@
               </p>
 
               <div class="q-gutter-xs q-mt-sm">
-                <q-chip v-for="tech in project.technologies?.slice(0, 3)" :key="tech" size="sm" outline color="primary"
+                <q-chip v-for="tech in project.technologies?.slice(0, 3)" :key="tech" size="md" outline color="primary"
                   class="tech-chip">
                   {{ tech }}
                 </q-chip>
-                <q-chip v-if="project.technologies && project.technologies.length > 3" size="sm" outline color="grey-7">
+                <q-chip v-if="project.technologies && project.technologies.length > 3" size="md" outline color="grey-7">
                   +{{ project.technologies.length - 3 }}
                 </q-chip>
               </div>
