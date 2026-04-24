@@ -6,87 +6,87 @@
     <template #default>
       <div class="row q-col-gutter-xl">
         <div class="col-12">
-          <h2 class="text-h4 text-weight-bold q-mb-md">Project Overview</h2>
-          <p class="text-h6 text-grey-8 leading-relaxed font-light q-mb-xl">
+          <h2 class="text-h4 text-weight-bold q-mb-md text-slate-800">Project Overview</h2>
+          <p class="text-h6 text-slate-700 leading-relaxed font-light q-mb-xl">
             For the SKIL2 project in semester 2, we developed a fully scalable and secure hosting platform.
             This platform is designed to host PHP, Laravel, and static websites in a containerized environment,
             where security and isolation are central.
           </p>
 
           <div class="architecture-diagram q-mb-xl">
-            <h3 class="text-h5 text-weight-bold q-mb-md">Architecture Diagram <q-icon name="zoom_in" size="xs" color="grey-6" /></h3>
+            <h3 class="text-h5 text-weight-bold q-mb-md text-slate-800">Architecture Diagram <q-icon name="zoom_in" size="xs" color="grey-6" /></h3>
             <ImageLightbox src="/projects/skill2_2/skill2_2.png" alt="Architecture Diagram" class="rounded-borders" />
           </div>
 
-          <h3 class="text-h5 text-weight-bold q-mb-lg">Core Infrastructure</h3>
+          <h3 class="text-h5 text-weight-bold q-mb-lg text-slate-800">Core Infrastructure</h3>
           <div class="features-grid row q-col-gutter-lg q-mb-xl">
             <div class="col-12 col-sm-6">
               <div class="feature-item">
                 <q-icon name="hub" color="primary" size="sm" class="q-mr-sm" />
-                <span class="text-h6 text-weight-bold">RKE2 Kubernetes</span>
-                <p class="text-body1 text-grey-7 q-mt-xs">A security-focused Kubernetes distribution for maximum reliability.</p>
+                <span class="text-h6 text-weight-bold text-slate-800">RKE2 Kubernetes</span>
+                <p class="text-body1 text-slate-700 q-mt-xs">A security-focused Kubernetes distribution for maximum reliability.</p>
               </div>
             </div>
             <div class="col-12 col-sm-6">
               <div class="feature-item">
                 <q-icon name="storage" color="secondary" size="sm" class="q-mr-sm" />
-                <span class="text-h6 text-weight-bold">Longhorn Storage</span>
-                <p class="text-body1 text-grey-7 q-mt-xs">Distributed block storage for persistent data of websites.</p>
+                <span class="text-h6 text-weight-bold text-slate-800">Longhorn Storage</span>
+                <p class="text-body1 text-slate-700 q-mt-xs">Distributed block storage for persistent data of websites.</p>
               </div>
             </div>
             <div class="col-12 col-sm-6">
               <div class="feature-item">
                 <q-icon name="security" color="accent" size="sm" class="q-mr-sm" />
-                <span class="text-h6 text-weight-bold">Network Isolation</span>
-                <p class="text-body1 text-grey-7 q-mt-xs">Each website runs in its own namespace with strict network isolation.</p>
+                <span class="text-h6 text-weight-bold text-slate-800">Network Isolation</span>
+                <p class="text-body1 text-slate-700 q-mt-xs">Each website runs in its own namespace with strict network isolation.</p>
               </div>
             </div>
             <div class="col-12 col-sm-6">
               <div class="feature-item">
                 <q-icon name="analytics" color="positive" size="sm" class="q-mr-sm" />
-                <span class="text-h6 text-weight-bold">Grafana Monitoring</span>
-                <p class="text-body1 text-grey-7 q-mt-xs">Real-time monitoring of resource usage and global health checks.</p>
+                <span class="text-h6 text-weight-bold text-slate-800">Grafana Monitoring</span>
+                <p class="text-body1 text-slate-700 q-mt-xs">Real-time monitoring of resource usage and global health checks.</p>
               </div>
             </div>
             <div class="col-12 col-sm-6">
               <div class="feature-item">
                 <q-icon name="router" color="blue-2" size="sm" class="q-mr-sm" />
-                <span class="text-h6 text-weight-bold">OPNsense Firewall</span>
-                <p class="text-body1 text-grey-7 q-mt-xs">Advanced security gateway with IDS/IPS and firewall rules for all traffic.</p>
+                <span class="text-h6 text-weight-bold text-slate-800">OPNsense Firewall</span>
+                <p class="text-body1 text-slate-700 q-mt-xs">Advanced security gateway with IDS/IPS and firewall rules for all traffic.</p>
               </div>
             </div>
           </div>
 
-          <h3 class="text-h5 text-weight-bold q-mb-lg">Platform Features</h3>
+          <h3 class="text-h5 text-weight-bold q-mb-lg text-slate-800">Platform Features</h3>
           <div class="row q-col-gutter-lg q-mb-xl">
             <div class="col-12 col-sm-6 col-md-3">
               <div class="feature-card q-pa-lg bg-indigo-1 rounded-borders border-indigo">
-                <h4 class="text-h6 text-weight-bold q-mb-sm">Client Dashboard</h4>
-                <p class="text-body2 text-grey-8">
+                <h4 class="text-h6 text-weight-bold q-mb-sm text-slate-800">Client Dashboard</h4>
+                <p class="text-body2 text-slate-700">
                   Clients can log in to our dashboard to manage their websites, view logs, and push updates.
                 </p>
               </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
               <div class="feature-card q-pa-lg bg-green-1 rounded-borders border-green">
-                <h4 class="text-h6 text-weight-bold q-mb-sm">GitHub Integration</h4>
-                <p class="text-body2 text-grey-8">
+                <h4 class="text-h6 text-weight-bold q-mb-sm text-slate-800">GitHub Integration</h4>
+                <p class="text-body2 text-slate-700">
                   Seamless deployment via GitHub Actions. Push your code and our platform handles the rest.
                 </p>
               </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
               <div class="feature-card q-pa-lg bg-orange-1 rounded-borders border-orange">
-                <h4 class="text-h6 text-weight-bold q-mb-sm">Managed by Rancher</h4>
-                <p class="text-body2 text-grey-8">
+                <h4 class="text-h6 text-weight-bold q-mb-sm text-slate-800">Managed by Rancher</h4>
+                <p class="text-body2 text-slate-700">
                   The entire cluster is managed via Rancher, providing a powerful interface for cluster operations.
                 </p>
               </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
               <div class="feature-card q-pa-lg bg-red-1 rounded-borders border-red">
-                <h4 class="text-h6 text-weight-bold q-mb-sm">Backup Strategy</h4>
-                <p class="text-body2 text-grey-8">
+                <h4 class="text-h6 text-weight-bold q-mb-sm text-slate-800">Backup Strategy</h4>
+                <p class="text-body2 text-slate-700">
                   Backups of Longhorn volumes are stored on a dedicated VM via an NFS share for data security.
                 </p>
               </div>

@@ -4,8 +4,8 @@
     :technologies="['Vue.js', 'Quasar', 'Vite', 'TypeScript']">
 
     <template #default>
-      <h2 class="text-h4 text-weight-bold q-mb-md">About This Project</h2>
-      <p class="text-h6 text-grey-8 leading-relaxed font-light q-mb-xl">
+      <h2 class="text-h4 text-weight-bold q-mb-md text-slate-800">About This Project</h2>
+      <p class="text-h6 text-slate-700 leading-relaxed font-light q-mb-xl">
         This portfolio website was designed to showcase my skills and projects. It uses Quasar Framework for its rich
         set of UI components and Vue 3 for a modern, reactive development experience.
       </p>
@@ -15,7 +15,7 @@
           <q-card flat bordered class="feature-card q-pa-md">
             <q-icon name="speed" size="md" color="primary" />
             <h3 class="text-h5 text-weight-bold q-my-sm">Performance</h3>
-            <p class="text-body1 text-grey-7">Built with Vite for lightning-fast HMR and optimized production builds.
+            <p class="text-body1 text-slate-700">Built with Vite for lightning-fast HMR and optimized production builds.
             </p>
           </q-card>
         </div>
@@ -23,13 +23,13 @@
           <q-card flat bordered class="feature-card q-pa-md">
             <q-icon name="dark_mode" size="md" color="primary" />
             <h3 class="text-h5 text-weight-bold q-my-sm">Design</h3>
-            <p class="text-body1 text-grey-7">Full dark mode support with glassmorphism and smooth transitions.</p>
+            <p class="text-body1 text-slate-700">Full dark mode support with glassmorphism and smooth transitions.</p>
           </q-card>
         </div>
       </div>
 
       <div class="features-section q-mb-xl">
-        <h2 class="text-h4 text-weight-bold q-mb-md">Key Features</h2>
+        <h2 class="text-h4 text-weight-bold q-mb-md text-slate-800">Key Features</h2>
         <q-list class="q-gutter-sm">
           <q-item v-for="feature in features" :key="feature" class="feature-item">
             <q-item-section avatar>
@@ -44,7 +44,7 @@
     </template>
 
     <template #extra>
-      <h2 class="text-h4 text-weight-bold q-mb-md">Tech Stack Details</h2>
+      <h2 class="text-h4 text-weight-bold q-mb-md text-slate-800">Tech Stack Details</h2>
       <div class="row q-gutter-md">
         <div v-for="stack in techStack" :key="stack.name" class="col-12 col-sm-auto">
           <q-chip outline color="primary" class="q-pa-lg">

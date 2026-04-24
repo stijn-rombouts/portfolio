@@ -37,24 +37,24 @@
           <slot name="sidebar">
             <q-card class="sidebar-card q-pa-md bordered shadow-sm">
               <q-card-section>
-                <div class="text-h6 q-mb-md font-bold">Project Details</div>
+                <div class="text-h6 q-mb-md font-bold text-slate-800">Project Details</div>
 
                 <div class="sidebar-info-item q-mb-lg">
-                  <div class="text-subtitle2 text-grey-7 q-mb-xs">Status</div>
+                  <div class="text-subtitle2 text-slate-700 q-mb-xs">Status</div>
                   <div :class="['status-chip', getStatusClass(status)]">
                     {{ status }}
                   </div>
                 </div>
 
                 <div class="sidebar-info-item q-mb-lg">
-                  <div class="text-subtitle2 text-grey-7 q-mb-xs">Repository</div>
+                  <div class="text-subtitle2 text-slate-700 q-mb-xs">Repository</div>
                   <q-btn v-if="github" :href="github" target="_blank" outline color="primary" class="full-width q-py-sm"
                     icon="mdi-github" label="View on GitHub" icon-right="open_in_new" no-caps />
-                  <span v-else class="text-grey-6 italic">Private Repository</span>
+                  <span v-else class="text-slate-700 italic">Private Repository</span>
                 </div>
 
                 <div v-if="technologies && technologies.length" class="sidebar-info-item q-mb-lg">
-                  <div class="text-subtitle2 text-grey-7 q-mb-xs">Technologies</div>
+                  <div class="text-subtitle2 text-slate-700 q-mb-xs">Technologies</div>
                   <div class="row q-gutter-xs">
                     <q-chip v-for="tech in technologies" :key="tech" color="primary" text-color="white" size="md">
                       {{ tech }}

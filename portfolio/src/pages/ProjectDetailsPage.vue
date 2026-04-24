@@ -12,8 +12,8 @@
 
       <template #default>
         <!-- Standard dynamic content -->
-        <h2 class="text-h4 text-weight-bold q-mb-md">About This Project</h2>
-        <p class="text-h6 text-grey-8 leading-relaxed font-light q-mb-xl">
+        <h2 class="text-h4 text-weight-bold q-mb-md text-slate-800">About This Project</h2>
+        <p class="text-h6 text-slate-700 leading-relaxed font-light q-mb-xl">
           {{ project.description }}
         </p>
 
@@ -23,7 +23,7 @@
 
       <!-- If we have a gallery, we could put it here -->
       <template #extra v-if="project.images && project.images.length">
-        <h2 class="text-h4 text-weight-bold q-mb-md">Gallery</h2>
+        <h2 class="text-h4 text-weight-bold q-mb-md text-slate-800">Gallery</h2>
         <div class="row q-col-gutter-md">
           <div v-for="(img, idx) in project.images" :key="idx" class="col-12 col-sm-6">
             <q-img :src="img" class="rounded-borders shadow-4" />
@@ -34,7 +34,7 @@
   </div>
   <q-page v-else class="flex flex-center">
     <div class="text-center">
-      <h3 class="text-h4 text-weight-bold text-grey-8">Project Not Found</h3>
+      <h3 class="text-h4 text-weight-bold text-slate-800">Project Not Found</h3>
       <q-btn flat color="primary" label="Back to Projects" to="/projects" class="q-mt-md" />
     </div>
   </q-page>

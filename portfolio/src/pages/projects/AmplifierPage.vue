@@ -5,8 +5,8 @@
 
 
     <template #default>
-      <h2 class="text-h4 text-weight-bold q-mb-md">Project Overview</h2>
-      <p class="text-h6 description-text leading-relaxed font-light q-mb-xl">
+      <h2 class="text-h4 text-weight-bold q-mb-md text-slate-800">Project Overview</h2>
+      <p class="text-h6 text-slate-700 leading-relaxed font-light q-mb-xl">
         This high-end audio project involves the design and construction of a custom multi-zone audio amplifier.
         Controlled by an ESP32, it features dedicated ATTINY-based controllers for each audio zone, a sophisticated
         audio input selection matrix, and a robust multi-rail power supply. The entire system is housed in a
@@ -22,23 +22,23 @@
         <div class="col-12 col-md-6">
           <ImageLightbox src="/projects/amplifier/closed.webp" alt="Complete MDF Enclosure (Front View)"
             class="rounded-borders" />
-          <div class="text-caption text-center description-text q-mt-sm">Complete MDF Enclosure (Front View)</div>
+          <div class="text-caption text-center text-slate-700 q-mt-sm">Complete MDF Enclosure (Front View)</div>
         </div>
         <div class="col-12 col-md-6">
           <ImageLightbox src="/projects/amplifier/back.webp" alt="Enclosure (Back View) showing connectors"
             class="rounded-borders" />
-          <div class="text-caption text-center description-text q-mt-sm">Enclosure (Back View) showing connectors</div>
+          <div class="text-caption text-center text-slate-700 q-mt-sm">Enclosure (Back View) showing connectors</div>
         </div>
       </div>
 
       <div class="system-architecture q-mb-xl">
-        <h2 class="text-h4 text-weight-bold q-mb-md">Modular System Architecture</h2>
+        <h2 class="text-h4 text-weight-bold q-mb-md text-slate-800">Modular System Architecture</h2>
         <div class="row q-col-gutter-lg">
           <div class="col-12 col-md-6">
             <q-card flat bordered class="module-card">
               <q-card-section>
                 <div class="text-h6 text-weight-bold text-primary">Motherboard (Master)</div>
-                <div class="text-body1 description-text">
+                <div class="text-body1 text-slate-700">
                   Centered around an <strong>ESP32 Dev Kit C</strong>, this module handles the high-level logic, user
                   input
                   from
@@ -54,7 +54,7 @@
             <q-card flat bordered class="module-card">
               <q-card-section>
                 <div class="text-h6 text-weight-bold text-secondary">Zone Controllers</div>
-                <div class="text-body1 description-text">
+                <div class="text-body1 text-slate-700">
                   Each zone is controlled by an <strong>ATTINY44</strong> microcontroller. These modules manage
                   localized
                   volume control using <strong>X9C103S digital potentiometers</strong> and use relays for speaker
@@ -67,7 +67,7 @@
             <q-card flat bordered class="module-card">
               <q-card-section>
                 <div class="text-h6 text-weight-bold text-accent">Audio Input Module</div>
-                <div class="text-body1 description-text">
+                <div class="text-body1 text-slate-700">
                   A sophisticated module using the <strong>CD4052BE</strong> (4:1, 2-channel multiplexer) to select
                   between various audio sources (RCA or Digital I2S). It includes logic level shifters to bridge
                   3.3V logic to the 5V/9V requirements of the multiplexer.
@@ -79,7 +79,7 @@
             <q-card flat bordered class="module-card">
               <q-card-section>
                 <div class="text-h6 text-weight-bold text-warning">Power Management</div>
-                <div class="text-body1 description-text">
+                <div class="text-body1 text-slate-700">
                   A custom power supply module utilizing an old car battery charger transformer. It provides multiple
                   voltage rails (+18V, +5V, +3.3V, +9V, and -9V) using <strong>LM2596 buck converters</strong> and a
                   dual-output buck-boost converter to handle both digital and analog power needs.
@@ -95,10 +95,10 @@
         <div class="absolute-top-right q-pa-md rotate-12 opacity-20">
           <q-icon name="smart_home" size="120px" class="icon-accent" />
         </div>
-        <h2 class="text-h4 text-weight-bold q-mb-md">Current State & Next Generation</h2>
+        <h2 class="text-h4 text-weight-bold q-mb-md text-slate-800">Current State & Next Generation</h2>
         <div class="row q-col-gutter-xl items-center">
           <div class="col-12 col-md-7">
-            <p class="text-body1 q-mb-lg description-text">
+            <p class="text-body1 q-mb-lg text-slate-700">
               The project is currently evolving from its initial ESP32-based design to a more powerful,
               network-integrated
               multimedia hub. Recent upgrades have significantly expanded its capabilities:
@@ -143,7 +143,7 @@
             <q-card flat bordered class="q-pa-lg glass-card">
               <q-icon name="settings_remote" size="80px" class="q-mb-md" />
               <div class="text-h6 text-weight-bold">Real-time Control</div>
-              <p class="text-body2 q-mt-sm">
+              <p class="text-body2 q-mt-sm text-slate-700">
                 Remotely set radio stations, toggle inputs, and adjust volume for every individual zone
                 straight from the Home Assistant dashboard or mobile app.
               </p>
@@ -153,10 +153,10 @@
       </div>
 
       <div class="design-section q-mb-xl q-pa-xl rounded-borders relative-position">
-        <h2 class="text-h4 text-weight-bold q-mb-md">Enclosure & CAD Design</h2>
+        <h2 class="text-h4 text-weight-bold q-mb-md text-slate-800">Enclosure & CAD Design</h2>
         <div class="row q-col-gutter-xl items-center">
           <div class="col-12 col-md-5">
-            <p class="text-body1 description-text">
+            <p class="text-body1 text-slate-700">
               The enclosure was meticulously designed in <strong>Autodesk Inventor</strong> to ensure a perfect fit
               for all components and connectors. The final design was then translated into instructions for a
               <strong>CNC machine</strong>, ensuring high-precision cuts and holes for the standard 43cm
@@ -166,24 +166,24 @@
           <div class="col-12 col-md-7">
             <ImageLightbox src="/projects/amplifier/topview.webp" alt="Top-down design view in CAD"
               class="rounded-borders shadow-3" />
-            <div class="text-caption text-center description-text q-mt-sm">Top-down design view in CAD</div>
+            <div class="text-caption text-center text-slate-700 q-mt-sm">Top-down design view in CAD</div>
           </div>
         </div>
       </div>
 
       <div class="logic-diag-section q-mb-xl">
-        <h2 class="text-h4 text-weight-bold q-mb-lg">System Block Diagram</h2>
+        <h2 class="text-h4 text-weight-bold q-mb-lg text-slate-800">System Block Diagram</h2>
         <div class="text-center">
           <ImageLightbox src="/projects/amplifier/drawio.webp" alt="System Block Diagram" class="rounded-borders"
             style="max-width: 800px; width: 100%; margin: 0 auto;" />
-          <div class="text-caption description-text q-mt-md">High-level architectural diagram detailing component
+          <div class="text-caption text-slate-700 q-mt-md">High-level architectural diagram detailing component
             interconnects.
           </div>
         </div>
       </div>
 
       <div class="gallery-section q-mt-xl">
-        <h2 class="text-h4 text-weight-bold q-mb-lg">Project Gallery</h2>
+        <h2 class="text-h4 text-weight-bold q-mb-lg text-slate-800">Project Gallery</h2>
         <div class="row q-col-gutter-lg">
           <div class="col-12 col-sm-6 col-md-4">
             <ImageLightbox src="/projects/amplifier/real/IMG20240412110546.webp" alt="Finished Project Photo 1"
@@ -325,11 +325,11 @@ import ImageLightbox from 'src/components/ImageLightbox.vue';
 }
 
 .description-text {
-  color: #212121; // grey-9
+  color: var(--text-secondary);
 }
 
 .body--dark .description-text {
-  color: #e0e0e0 !important; // grey-3
+  color: var(--text-secondary) !important;
 }
 
 .transition-all {

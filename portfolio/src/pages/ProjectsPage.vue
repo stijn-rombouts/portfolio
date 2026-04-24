@@ -3,7 +3,7 @@
     <div class="container">
       <div class="text-center q-mb-xl">
         <h1 class="text-h2 text-weight-bold gradient-text q-mb-md q-pb-sm">Projects</h1>
-        <p class="text-h5 text-grey-7">Explore my work, from academic projects to personal explorations.</p>
+        <p class="text-h5 text-slate-700">Explore my work, from academic projects to personal explorations.</p>
       </div>
 
       <div class="row q-col-gutter-xl justify-center">
@@ -17,7 +17,7 @@
 
             <q-card-section class="q-pa-md">
 
-              <p class="text-body1 text-grey-8 line-clamp-2">
+              <p class="text-body1 text-slate-700 line-clamp-2">
                 {{ project.description }}
               </p>
 
@@ -82,8 +82,8 @@ const getStatusClass = (status: string) => {
   height: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  background: #ffffff;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
 }
 
 .project-card:hover {
@@ -91,10 +91,6 @@ const getStatusClass = (status: string) => {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
-.body--dark .project-card {
-  background: #1e293b;
-  border-color: rgba(255, 255, 255, 0.1);
-}
 
 .project-image {
   border-bottom: 4px solid var(--q-primary);

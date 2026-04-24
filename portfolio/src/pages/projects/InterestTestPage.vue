@@ -5,8 +5,8 @@
 
     <template #default>
       <div class="project-overview-content text-left">
-        <h2 class="text-h4 text-weight-bold q-mb-md relative-position">Project Vision</h2>
-        <p class="text-h6 text-grey-8 leading-normal font-light q-mb-xl glass-container q-pa-lg">
+        <h2 class="text-h4 text-weight-bold q-mb-md relative-position text-slate-800">Project Vision</h2>
+        <p class="text-h6 text-slate-700 leading-normal font-light q-mb-xl glass-container q-pa-lg">
           Developed for <strong><a href="https://www.mpi-oosterlo.be/" target="_blank"
               class="text-primary text-weight-bold" style="text-decoration: none;">MPI Oosterloo</a></strong>,
           this tool replaces traditional text-based intake forms with a sleek, <strong>behavior-driven visual
@@ -16,7 +16,7 @@
           intuitively map their professional preferences, providing more accessible and accurate data for career
           counselors.
         </p>
-        <h2 class="text-h4 text-weight-bold q-mb-lg">My Technical Contributions</h2>
+        <h2 class="text-h4 text-weight-bold q-mb-lg text-slate-800">My Technical Contributions</h2>
         <div class="contributions-grid row q-col-gutter-md q-mb-xl">
           <div v-for="task in tasks" :key="task.title" class="col-12 col-sm-6">
             <q-card flat bordered class="task-card full-height hover-lift">
@@ -30,14 +30,14 @@
                 </div>
               </q-card-section>
               <q-card-section class="q-pt-none">
-                <p class="text-body1 text-grey-8">{{ task.desc }}</p>
+                <p class="text-body1 text-slate-700">{{ task.desc }}</p>
               </q-card-section>
             </q-card>
           </div>
         </div>
 
         <div class="technical-gallery q-mb-xl">
-          <h2 class="text-h4 text-weight-bold q-mb-lg">Screenshots</h2>
+          <h2 class="text-h4 text-weight-bold q-mb-lg text-slate-800">Screenshots</h2>
           <div class="row q-col-gutter-lg">
             <div class="col-12 col-md-12">
               <q-card flat bordered class="overflow-hidden">
