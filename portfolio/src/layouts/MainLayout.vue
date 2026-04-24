@@ -64,7 +64,7 @@
       </router-view>
     </q-page-container>
 
-    <q-footer class="glass-footer q-pa-md text-center">
+    <q-footer class="glass-footer q-pa-md text-center text-white">
       <div>&copy; {{ new Date().getFullYear() }} Stijn Rombouts.</div>
     </q-footer>
   </q-layout>
@@ -101,6 +101,12 @@ function toggleLeftDrawer() {
   background: rgb(15, 23, 42) !important;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-footer {
+  background: rgb(15, 23, 42) !important;
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .container {
