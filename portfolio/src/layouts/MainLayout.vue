@@ -9,8 +9,8 @@
         <div class="gt-sm q-gutter-md row items-center">
           <q-btn flat no-caps label="Home" to="/" :class="{ 'active': $route.path === '/' }" />
           <q-btn flat no-caps label="About Me" to="/about" :class="{ 'active': $route.path === '/about' }" />
-          <q-btn flat no-caps label="Projects" to="/projects" :class="{ 'active': $route.path === '/projects' }" />
-          <q-btn flat no-caps label="View CV" to="/cv" :class="{ 'active': $route.path === '/cv' }" class="q-px-md" />
+          <q-btn flat no-caps label="Projects" to="/projects" :class="{ 'active': $route.path.startsWith('/projects') }" />
+          <q-btn flat no-caps label="View CV" to="/cv" :class="{ 'active': $route.path.startsWith('/cv') }" class="q-px-md" />
 
           <q-btn flat round dense :icon="$q.dark.isActive ? 'light_mode' : 'dark_mode'" class="q-ml-md"
             @click="toggleDarkMode" aria-label="Toggle dark mode">
@@ -35,19 +35,19 @@
           </q-item-section>
           <q-item-section>Home</q-item-section>
         </q-item>
-        <q-item clickable v-ripple to="/about" :active-class="$q.dark.isActive ? 'bg-indigo-10 text-indigo-2' : 'bg-indigo-1 text-primary'">
+        <q-item clickable v-ripple to="/about" :active="$route.path.startsWith('/about')" :active-class="$q.dark.isActive ? 'bg-indigo-10 text-indigo-2' : 'bg-indigo-1 text-primary'">
           <q-item-section avatar>
             <q-icon name="person" />
           </q-item-section>
           <q-item-section>About Me</q-item-section>
         </q-item>
-        <q-item clickable v-ripple to="/projects" :active-class="$q.dark.isActive ? 'bg-indigo-10 text-indigo-2' : 'bg-indigo-1 text-primary'">
+        <q-item clickable v-ripple to="/projects" :active="$route.path.startsWith('/projects')" :active-class="$q.dark.isActive ? 'bg-indigo-10 text-indigo-2' : 'bg-indigo-1 text-primary'">
           <q-item-section avatar>
             <q-icon name="work" />
           </q-item-section>
           <q-item-section>Projects</q-item-section>
         </q-item>
-        <q-item clickable v-ripple to="/cv" :active-class="$q.dark.isActive ? 'bg-indigo-10 text-indigo-2' : 'bg-indigo-1 text-primary'">
+        <q-item clickable v-ripple to="/cv" :active="$route.path.startsWith('/cv')" :active-class="$q.dark.isActive ? 'bg-indigo-10 text-indigo-2' : 'bg-indigo-1 text-primary'">
           <q-item-section avatar>
             <q-icon name="description" />
           </q-item-section>
